@@ -1,3 +1,9 @@
+## TODO
+- Add Dajavu Support
+- Add Command Support
+- Cleanup main runner
+
+
 # About the Project
 I've seen a lot of people making bots that can create Reddit videos for TikTok, so I decided to expand on that idea
 and make a program that can make TikTok meme videos and automatically post them. Memes are collected from either Reddit,

@@ -15,7 +15,7 @@ def add_to_dejavu(s):
 
 # Clears the dejavu txt file
 def clear_dejavu():
-    with open("dejavu.txt", "w") as f:
+    with open("./dejavu.txt", "w") as f:
         f.write("")
 
 # Overwrites the dejavu txt file with just it's last 100 lines

@@ -27,31 +27,31 @@ def type_caption(elem, cap_list):
 class TikTok(Chrome):
     # Constructor
     def __init__(self, hashtags, video_generator, first_login=False):
-        # Ensures the caption is not too long
-        if len(" ".join(["#" + s for s in hashtags])) >= 150:
-            raise Exception("You have too many hashtags, please shorten the amount.")
+        # # Ensures the caption is not too long
+        # if len(" ".join(["#" + s for s in hashtags])) >= 150:
+        #     raise Exception("You have too many hashtags, please shorten the amount.")
         
-        # Setting the options for the Chrome instance
-        options = ChromeOptions()
-        options.add_argument("--disable-blink-features=AutomationControlled")
-        options.add_argument("window-size=1920,1000")
-        options.add_argument("--profile-directory=Default")
-        options.add_argument("--disable-notifications")
+        # # Setting the options for the Chrome instance
+        # options = ChromeOptions()
+        # options.add_argument("--disable-blink-features=AutomationControlled")
+        # options.add_argument("window-size=1920,1000")
+        # options.add_argument("--profile-directory=Default")
+        # options.add_argument("--disable-notifications")
 
-        # Sets the Chrome data to be the folder in the directory that's called selenium_data
-        data_abs_path = os.path.abspath("selenium_data")
-        options.add_argument("--user-data-dir=" + data_abs_path)
+        # # Sets the Chrome data to be the folder in the directory that's called selenium_data
+        # data_abs_path = os.path.abspath("selenium_data")
+        # options.add_argument("--user-data-dir=" + data_abs_path)
 
-         # Let's the user log in to TikTok if they need to
-        if first_login:
-            self.log_into_tiktok(data_abs_path)
+        #  # Let's the user log in to TikTok if they need to
+        # if first_login:
+        #     self.log_into_tiktok(data_abs_path)
 
-        # Initializes the driver
-        super().__init__(options=options)
+        # # Initializes the driver
+        # super().__init__(options=options)
 
-        # Sets the other fields
-        self.wait = WebDriverWait(self, 15)
-        self.hashtags = hashtags
+        # # Sets the other fields
+        # self.wait = WebDriverWait(self, 15)
+        # self.hashtags = hashtags
         self.video_generator = video_generator
     
     # Uploads the meme based on the file name given/it's directory
@@ -97,7 +97,7 @@ class TikTok(Chrome):
     def run(self):
         print("Starting the run loop ....")
         while True:
-            self.upload_meme(self.video_generator.gen_meme_video())
+            self.video_generator.gen_meme_video()
             time.sleep(5400)
 
 
@@ -112,7 +112,7 @@ if __name__ == "__main__":
         os.getenv("REDDIT_USERNAME"),
         os.getenv("REDDIT_PASSWORD"),
         os.getenv("USER_AGENT")
-        )
+    )
 
     meme_generator = MemeMachine(
         "meme",
@@ -122,15 +122,25 @@ if __name__ == "__main__":
         [int(os.getenv("REDDIT_PERCENT")), 0, int(os.getenv("IG_PERCENT"))],
         reddit_info,
         True
-        )
+    )
 
-    video_generator = VideoGenerator("output.mp4", meme_generator)
+    if not os.path.exists("./results"):
+        os.mkdir("./results")
+    if not os.path.exists("./temp"):
+        os.mkdir("./temp")
+    if not os.path.exists("./assets"):
+        os.mkdir("./assets")
+    if not os.path.exists("./assets/audio"):
+        os.mkdir("./assets/audio")
+    if not os.path.exists("./assets/video"):
+        os.mkdir("./assets/video")
+    video_generator = VideoGenerator(f"./results/{time.time()}.mp4", meme_generator)
 
     tiktok = TikTok(
         [s for s in os.getenv("TIKTOK_HASHTAGS").split(", ") if s != ""],
         video_generator,
         os.getenv("TIKTOK_LOGIN").lower() == "yes"
-        )
+    )
     
-    # Running the loop
+    # # Running the loop
     tiktok.run()
