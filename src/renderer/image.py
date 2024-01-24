@@ -1,16 +1,15 @@
-import os
 from moviepy.editor import CompositeVideoClip
-from src.config.core import OUTPUT_DIR
-from src.properties.default import Properties
+from properties.default import Properties
+from src.renderer.__abs__ import Renderer
 from src.renderer.components.audio import RenderAudio
 from src.renderer.components.background import RenderBackground
 from src.renderer.components.image import RenderImage
 
 
-class ImageRenderer:
+class ImageRenderer():
 
 
-    def __init__(self, output:str, bgVideo:str=None, bgAudio:str=None, properties:Properties=Properties()):
+    def __init__(self, output:str, bgVideo:type[str|None], bgAudio:type[str|None], properties:Properties):
         self.output     = output
         self.bgVideo    = bgVideo
         self.bgAudio    = bgAudio
@@ -21,7 +20,7 @@ class ImageRenderer:
         length     = self.properties.CLIP_LENGTH_MIN
         background = RenderBackground(self.properties, self.bgVideo, length)
         audio      = RenderAudio(self.properties, self.bgAudio, length)
-        meme       = RenderImage(self.properties, imageURL, length)
+        meme       = RenderImage(self.properties, imageURL, length, background)
 
         compose = CompositeVideoClip([background, meme])
         compose = compose.set_duration(length)

@@ -3,6 +3,11 @@
 - Add Command Support
 - Cleanup main runner
 
+## Possible Features
+- Add OpenAI with prompt engineering to do TTS normalization
+- Add OpenAI with prompt enginerring to come up with description with emojis and hashtags
+- Add OpenAI with prompt enginerring to detect sexual content categorization
+
 
 # About the Project
 I've seen a lot of people making bots that can create Reddit videos for TikTok, so I decided to expand on that idea

@@ -1,9 +1,3 @@
-from math import floor
-from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
-from moviepy.editor import VideoFileClip, ImageClip
-import moviepy.editor as mp
-import random, os
-from meme_collecting import MemeMachine
 from src.renderer.image import ImageRenderer   
 
 

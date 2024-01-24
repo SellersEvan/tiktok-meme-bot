@@ -117,23 +117,10 @@ if __name__ == "__main__":
     meme_generator = MemeMachine(
         "meme",
         [s for s in os.getenv("SUBREDDITS").split(", ") if s != ""],
-        [],
-        [s for s in os.getenv("IG_ACCOUNTS").split(", ") if s != ""],
-        [int(os.getenv("REDDIT_PERCENT")), 0, int(os.getenv("IG_PERCENT"))],
-        reddit_info,
-        True
+        reddit_info
     )
 
-    if not os.path.exists("./results"):
-        os.mkdir("./results")
-    if not os.path.exists("./temp"):
-        os.mkdir("./temp")
-    if not os.path.exists("./assets"):
-        os.mkdir("./assets")
-    if not os.path.exists("./assets/audio"):
-        os.mkdir("./assets/audio")
-    if not os.path.exists("./assets/video"):
-        os.mkdir("./assets/video")
+
     video_generator = VideoGenerator(f"./results/{time.time()}.mp4", meme_generator)
 
     tiktok = TikTok(
