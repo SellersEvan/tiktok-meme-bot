@@ -1,5 +1,5 @@
 from dejavu import Dajavu, FingerprintImage
-from properties.default import Properties
+from properties.index import Properties
 from renderer.image import ImageRenderer
 
 
