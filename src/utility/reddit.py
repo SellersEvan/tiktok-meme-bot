@@ -1,10 +1,18 @@
 import praw
 from src.config.index import Config
 from src.static import REDDIT_USER_AGENT
+from src.utility.error import LogError
 
 
 def GetRedditPost(url:str) -> praw.Reddit.submission:
-    return GetReddit().submission(url=url)
+    if "reddit.com" not in url:
+        raise LogError("Invalid Reddit URL")
+    if "comments" not in url:
+        raise LogError("Invalid Reddit URL, must be a comment")
+    post = GetReddit().submission(url=url)
+    if not post:
+        raise LogError("Invalid Reddit URL, must be a comment")
+    return post
 
 
 def GetReddit() -> praw.Reddit:
@@ -16,4 +24,12 @@ def GetReddit() -> praw.Reddit:
         password=config.REDDIT_PASSWORD,
         user_agent=REDDIT_USER_AGENT
     )
+
+
+def RedditPostHasImage(post:praw.Reddit.submission) -> bool:
+    if not post.url:
+        return False
+    if post.url.split(".")[-1].lower() not in ["jpg", "jpeg", "png"]:
+        return False
+    return True
 
