@@ -1,5 +1,5 @@
 from moviepy.editor import CompositeVideoClip
-from properties.index import Properties
+from src.properties.index import Properties
 from src.renderer.components.audio import RenderAudio
 from src.renderer.components.background import RenderBackground
 from src.renderer.components.image import RenderImage

@@ -2,6 +2,7 @@ from ctypes import Array
 import datetime
 import json
 from typing import Mapping
+from src.utility.error import LogError
 
 
 DAJAVU_FILE = "dejavu.json"
@@ -12,8 +13,10 @@ class Dajavu():
 
     @staticmethod
     def Add(properties:Mapping[str, str]):
+        if Dajavu.Contains(properties):
+            raise LogError("Duplicated asset being created...")
         entries   = Dajavu._getFile()
-        timestamp = datetime.now(datetime.timezone.utc).isoformat()
+        timestamp = str(datetime.datetime.now())
         properties["timestamp"] = timestamp
         entries.append(properties)
         with open(DAJAVU_FILE, "w") as file:

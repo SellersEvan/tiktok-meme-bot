@@ -1,8 +1,8 @@
 import os
 import random
 from moviepy.editor import VideoFileClip
-from src.config.core import ASSETS_DIR_BG_VIDEO
-from properties.index import Properties
+from src.static import ASSETS_DIR_BG_VIDEO
+from src.properties.index import Properties
 
 
 def RenderBackground(options:Properties, file:str=None, duration:int=0) -> VideoFileClip:

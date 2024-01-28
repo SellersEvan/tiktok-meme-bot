@@ -1,7 +1,7 @@
 import os
 from dotenv import dotenv_values
 from src.config.model import CONFIG_STRUCTURE
-from src.config.core import CONFIG_PATH
+from src.static import CONFIG_PATH
 from src.utility.error import LogError
 
 

@@ -1,7 +1,7 @@
 import os
 from dotenv import dotenv_values
 from src.properties.model import PROPERTIES_DEFAULTS, PROPERTIES_TYPES
-from src.config.core import PROPERTIES_PATH
+from src.static import PROPERTIES_PATH
 from src.utility.error import LogError
 
 

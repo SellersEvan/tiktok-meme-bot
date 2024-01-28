@@ -10,7 +10,7 @@
 
 CONFIG_STRUCTURE = [{
     "isRequired": True,
-    "primary":  ["REDDIT_CLIENT_ID", "REDDIT_SECRET", "REDDIT_USERNAME", "REDDIT_PASSWORD", "REDDIT_USER_AGENT"],
+    "primary":  ["REDDIT_CLIENT_ID", "REDDIT_SECRET", "REDDIT_USERNAME", "REDDIT_PASSWORD"],
     "optional": []
 }]
 

@@ -1,9 +1,13 @@
 ## TODO
-- Add Dajavu Support
+- Add Main Runner
 - Add Command Support
-- Cleanup main runner
+- Header + Footers
+- GitHub Cleanup (Readme, etc.)
+
 
 ## Possible Features
+- Is Meme Image Classification AI (Should be Pretty easy using the Microsoft Lobe)
+    - https://www.lobe.ai/
 - Add OpenAI with prompt engineering to do TTS normalization
 - Add OpenAI with prompt enginerring to come up with description with emojis and hashtags
 - Add OpenAI with prompt enginerring to detect sexual content categorization
