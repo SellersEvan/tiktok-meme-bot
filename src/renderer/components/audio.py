@@ -1,8 +1,8 @@
 import os
 import random
 from moviepy.editor import AudioFileClip
-from src.config.core import ASSETS_DIR_BG_AUDIO
-from properties.index import Properties
+from src.static import ASSETS_DIR_BG_AUDIO
+from src.properties.index import Properties
 
 
 def RenderAudio(options:Properties, file:str=None, duration:int=0) -> AudioFileClip:

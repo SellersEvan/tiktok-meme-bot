@@ -1,7 +1,8 @@
 assets/
 results/
-selenium_data/
-dejavu.txt
+temp/
+dejavu.json
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

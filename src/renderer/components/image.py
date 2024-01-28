@@ -1,5 +1,5 @@
 from moviepy.editor import ImageClip
-from properties.index import Properties
+from src.properties.index import Properties
 
 
 def RenderImage(options:Properties, file:str, duration:int=0, background:ImageClip=None) -> ImageClip:
