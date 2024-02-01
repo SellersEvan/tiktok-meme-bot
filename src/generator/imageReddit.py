@@ -1,3 +1,16 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Wed Jan 31 2024
+#   file: imageReddit.py
+#   project: TikTok Meme Bot
+#   purpose: Generate Image Videos from Reddit
+#
+#
+
+
 from src.generator.utilities import Cleanup, Setup
 from src.dejavu.index import Dajavu
 from src.dejavu.utility import FingerprintImage
@@ -19,3 +32,8 @@ def GenerateImageReddit(redditURL:str, output:str=None, bgVideo:str=None, bgAudi
     Dajavu.Add({ "reddit": post.id, "image": FingerprintImage(imageURL) })
     ImageRenderer(output, imageURL, bgVideo, bgAudio, properties)
     Cleanup(imageURL)
+
+
+# The mind governed by the flesh is death, but the mind governed by the Spirit
+# is life and peace.
+# - Romans 8:6

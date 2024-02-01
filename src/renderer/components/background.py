@@ -1,3 +1,16 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Thu Feb 01 2024
+#   file: background.py
+#   project: TikTok Meme Bot
+#   purpose: Render Background Component
+#
+#
+
+
 import os
 import random
 from moviepy.editor import VideoFileClip
@@ -34,3 +47,6 @@ def selectRandomVideo() -> str:
         raise Exception(f"Please ensure there is .mp4 files in the {ASSETS_DIR_BG_VIDEO} directory.")
     return random.choice(videos)
 
+
+# Surely God is my help; the Lord is the one who sustains me.
+# - Psalm 54:4

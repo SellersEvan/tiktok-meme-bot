@@ -1,3 +1,16 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Thu Feb 01 2024
+#   file: files.py
+#   project: TikTok Meme Bots
+#   purpose: File Utilities
+#
+#
+
+
 import os
 import time
 import requests
@@ -47,3 +60,6 @@ def GetImageFile(path:str) -> str:
     img.save(filename)
     return filename
 
+
+# The Lord has done it this very day; let us rejoice today and be glad.
+# - Psalm 118:24

@@ -1,3 +1,16 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Wed Jan 31 2024
+#   file: index.py
+#   project: TikTok Meme Bot
+#   purpose: Validate ENV File
+#
+#
+
+
 import os
 from dotenv import dotenv_values
 from src.config.model import CONFIG_STRUCTURE
@@ -58,3 +71,6 @@ class Config:
                 buffer += f"{attr}: {getattr(self, attr)}\n"
         return buffer
 
+
+# In the same way, faith by itself, if it is not accompanied by action, is dead.
+# - James 2:17

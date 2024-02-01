@@ -1,3 +1,16 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Wed Jan 31 2024
+#   file: reddit.py
+#   project: TikToke Meme Bot
+#   purpose: Generate Meme Videos from scrapping Subreddits
+#
+#
+
+
 import praw
 import random
 from src.generator.utilities import Cleanup, Setup
@@ -36,3 +49,7 @@ def getRandomPost(subreddits:list[str]) -> praw.Reddit.submission:
         # ? (FUTURE) ADD PROFANITY DETECTION
         return post
 
+
+# Blessed are those whose ways are blameless, who walk according to the law
+# of the Lord.
+# - Psalm 119:1

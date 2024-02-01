@@ -1,3 +1,14 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Wed Jan 31 2024
+#   file: model.py
+#   project: TikTok Meme Bot
+#   purpose: ENV File Validation Structure
+#
+#
 
 
 """
@@ -14,3 +25,6 @@ CONFIG_STRUCTURE = [{
     "optional": []
 }]
 
+
+# This is what the Lord says to Israel: "Seek me and live."
+# - Amos 5:4

@@ -1,3 +1,16 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Wed Jan 31 2024
+#   file: audio.py
+#   project: TikTok Meme Bot
+#   purpose: Render Audio Component
+#
+#
+
+
 import os
 import random
 from moviepy.editor import AudioFileClip

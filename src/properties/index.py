@@ -1,3 +1,16 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Wed Jan 31 2024
+#   file: index.py
+#   project: TikTok Meme Bot
+#   purpose: Load and Validate Properties
+#
+#
+
+
 import os
 from dotenv import dotenv_values
 from src.properties.model import PROPERTIES_DEFAULTS, PROPERTIES_TYPES
@@ -61,3 +74,6 @@ class Properties:
                 buffer += f"{attr}: {getattr(self, attr)}\n"
         return buffer
 
+
+# If it is possible, as far as it depends on you, live at peace with everyone.
+# - Romans 12:18

@@ -1,3 +1,16 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Thu Feb 01 2024
+#   file: reddit.py
+#   project: TikTok Meme Bot
+#   purpose: Reddit Utilities
+#
+#
+
+
 import praw
 from src.config.index import Config
 from src.static import REDDIT_USER_AGENT
@@ -33,3 +46,6 @@ def RedditPostHasImage(post:praw.Reddit.submission) -> bool:
         return False
     return True
 
+
+# Show me your ways, Lord, teach me your paths.
+# - Psalm 25:4

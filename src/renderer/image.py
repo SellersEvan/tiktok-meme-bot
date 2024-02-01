@@ -1,3 +1,16 @@
+#
+#   Copyright (C) 2024 Sellers Industries, Inc.
+#   distributed under the MIT License
+#
+#   author: Evan Sellers <sellersew@gmail.com>
+#   date: Thu Feb 01 2024
+#   file: image.py
+#   project: TikTok Meme Bot
+#   purpose: Render Video for Image
+#
+#
+
+
 from moviepy.editor import CompositeVideoClip
 from src.properties.index import Properties
 from src.renderer.components.audio import RenderAudio
@@ -17,3 +30,7 @@ def ImageRenderer(output:str, imageURL:str, bgVideo:type[str|None], bgAudio:type
     compose.write_videofile(output, remove_temp=True)
     compose.close()
 
+
+# You are to be holy to me because I, the Lord, am holy, and I have set you
+# apart from the nations to be my own.
+# - Leviticus 20:26
